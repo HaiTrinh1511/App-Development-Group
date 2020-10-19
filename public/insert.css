@@ -1,0 +1,7 @@
+body {
+    background: url("https://www.drivespark.com/images/2018-10/2019-kawasaki-ninja-zx-6r-57.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="admin.css">
+<title> Add Training Staff </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+        function checkForm(){
+            let inputPhone = document.getElementById('txtPhone').value;
+            if (inputPhone.trim().length == 0){
+                alert('Phone cannot be empty');
+                document.getElementById('lblPhoneError').innerText = "Phone cannot be empty";
+                return false;
+            }
+            else if(inputPhone.trim().length < 8){
+                alert('Phone must contain at least 8 characters');
+                document.getElementById('lblPhoneError').innerText = "More than 8 characters";
+                return false;
+            }
+    
+        }
+    </script>
+<style>
+
+</style>
+
+<head>
+
+</head>
+
+<body>
+     <div class="header">
+        <img src="https://kenh14cdn.com/2018/2/27/arnel-hasanovic-375269-unsplash-1519688784013425403380.jpg"
+            width="1100px" height="500px">
+        <br>
+        <br>
+    </div>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="/admin" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">Add Account <i
+                        class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="/addtrainer" class="w3-bar-item w3-button">Trainer</a>
+                    <a href="/addtrainingstaff" class="w3-bar-item w3-button">Training Staff</a>
+                </div>
+            </div>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">View <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="/viewtrainer" class="w3-bar-item w3-button">Trainer</a>
+                    <a href="/viewtrainingstaff" class="w3-bar-item w3-button">Training Staff</a>
+                </div>
+            </div>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Contact</a>
+            <a href="/adminlogout" style="float:right" class="w3-bar-item w3-button w3-padding-large">LogOut </a>
+        </div>
+    </div>
+
+    <!-- The Tour Section -->
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 class="well">Registration for Training Staff</h1>
+        <div class="col-lg-12 well">
+            <div class="row">
+                <form action="/doAddStaff" method="post" onsubmit="checkForm()" > 
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label>First Name</label>
+                                <input type="text" name="txtfirstName" placeholder="Enter First Name Here.."
+                                    class="form-control" id="">
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label>Last Name</label>
+                                <input type="text" name="txtlastName" placeholder="Enter Last Name Here.."
+                                    class="form-control" id="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="number" name="txtPhone" placeholder="Enter Phone Number Here.."
+                                class="form-control" id="txtPhone">
+                                <label id = "lblPhoneError" style="color: red">{{model.phoneError}}</label>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" name="txtEmail" placeholder="Enter Email Address Here.."
+                                class="form-control" id="">
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" name="txtPassword" placeholder="Enter Email Address Here.."
+                                class="form-control" id="">
+                        </div>
+                        <button type="submit" value="AddStaff" class="btn btn-lg btn-info">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- The Contact Section -->
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+        <h2 class="w3-wide w3-center">CONTACT</h2>
+        <p class="w3-opacity w3-center"><i>Want to know more about us?</i></p>
+
+        <div class="w3-container w3-content w3-padding-64">
+            <div class="w3-col m6 w3-large w3-margin-bottom">
+                <i class="fa fa-map-marker" style="width:30px"></i> Ha Noi, VN<br>
+                <i class="fa fa-phone" style="width:30px"></i> Phone: +8485107196<br>
+                <i class="fa fa-envelope" style="width:30px"> </i> Email: huyphansy226@mail.com<br>
+            </div>
+            <div class="w3-col m6">
+                <div class="w3-row-padding" style="margin:0 -16px 8px -16px"></div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.097938454915!2d105.77951851437827!3d21.0287668931553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b329f68977%3A0x6ddf5ff1e829fc56!2zxJDhuqFpIGjhu41jIEdyZWVud2ljaCAoVmnhu4d0IE5hbSk!5e0!3m2!1sen!2s!4v1601451678131!5m2!1sen!2s"
+                    style="width:82%" frameborder="0" style="border:0;" aria-hidden="false" tabindex="0"></iframe>
+
+
+            </div>
+        </div>
+
+        <!-- End Page Content -->
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <p class="w3-medium">Powered by <a href="https://www.facebook.com/profile.php?id=100010380105167"
+                target="_blank">Huy Phan</a>
+        </p>
+    </footer>
+
+
+</body>
+
+</html>

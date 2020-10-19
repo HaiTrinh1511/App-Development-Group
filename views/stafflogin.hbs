@@ -1,0 +1,102 @@
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="login.css">
+<title> Staff Login </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+</style>
+
+<head>
+
+</head>
+
+<body>
+
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+        onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="/home" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+
+
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Contact</a>
+
+    </div>
+  </div>
+
+
+
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+    <!-- The Tour Section -->
+    <br><br><br><br>
+    <br><br><br><br>
+    <div class="container">
+      <form action="/stafflogin" method = "POST">
+        <div class="row">
+          <h2 style="text-align:center">Login as Staff </h2>
+          <div class="vl">
+
+          </div>
+
+          <div class="col">
+            <br>
+            <a class="button" href="/adminlogin" style="vertical-align:middle"><span>Admin </span></a>
+            <a class="button" href="/trainerlogin" style="vertical-align:middle"><span>Trainer </span></a>
+          </div>
+
+          <div class="col">
+            <div class="hide-md-lg">
+              <p>Or sign in manually:</p>
+            </div>
+             <p style="color: #f00;">{{ errorMessage }}</p>
+
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+          </div>
+
+        </div>
+      </form>
+    </div>
+
+
+    <!-- The Contact Section -->
+
+
+
+    <!-- Footer -->
+    <br>
+
+
+
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <p class="w3-medium">Powered by <a href="https://www.facebook.com/profile.php?id=100010380105167"
+          target="_blank">Huy Phan</a>
+      </p>
+    </footer>
+
+
+</body>
+
+</html>

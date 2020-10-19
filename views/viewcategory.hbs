@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="viewtrainee.css">
+<title> View Category </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+
+</style>
+
+<head>
+
+</head>
+
+<body>
+     <div class="header">
+    <img src="https://kenh14cdn.com/2018/2/27/arnel-hasanovic-375269-unsplash-1519688784013425403380.jpg" width="1100px"
+      height="500px">
+  </div>
+
+    <br><br>
+    <form action="/doSearchCategory">
+        <br> <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <center>
+            <!-- Search form -->
+            <input class="form-control" type="text" name="txtSearch" placeholder="Search" aria-label="Search">
+        </center>
+        <br>
+        <br>
+    </form>
+    <br>
+
+    <table id="customers">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Option</th>
+
+            </tr>
+            {{#each model}}
+            <tr>
+                <td>{{_id}} </td>
+                <td>{{name}}</td>
+                <td>{{description}}</td>
+                <td>
+                    <center>
+                        <a href="/removecategory?id={{_id}}" class="btn btn-warning">Remove</a>
+                        <br>
+                    </center>
+                    <center>
+                        <br>
+                        <a href="/updatecategory/{{ _id }}" class="btn btn-success">Update</a>
+                    </center>
+                </td>
+                </td>
+            </tr>
+            {{/each}}
+    </table>
+    <!-- Navbar -->
+     <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="/trainingstaff" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">Topic <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="/viewtopic" class="w3-bar-item w3-button">View Topic</a>
+                    <a href="/addtopic" class="w3-bar-item w3-button">Add Topic</a>
+                </div>
+            </div>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">Course <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="/viewcourse" class="w3-bar-item w3-button">View Course</a>
+                    <a href="/addcourse" class="w3-bar-item w3-button">Add Course</a>
+
+
+                </div>
+            </div>
+
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">Category <i
+                        class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="/viewcategory" class="w3-bar-item w3-button">View Category</a>
+                    <a href="/addcategory" class="w3-bar-item w3-button">Add Category</a>
+
+
+                </div>
+            </div>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">Trainee <i
+                        class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="/viewtrainee" class="w3-bar-item w3-button"> ViewTrainee</a>
+                    <a href="/addtrainee" class="w3-bar-item w3-button">Add trainee</a>
+
+                </div>
+            </div>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Contact</a>
+            <a href="/stafflogout" style="float:right" class="w3-bar-item w3-button w3-padding-large">LogOut </a>
+        </div>
+    </div>
+
+    <!-- The Contact Section -->
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+        <h2 class="w3-wide w3-center">CONTACT</h2>
+        <p class="w3-opacity w3-center"><i>Want to know more about us?</i></p>
+
+        <div class="w3-container w3-content w3-padding-64">
+            <div class="w3-col m6 w3-large w3-margin-bottom">
+                <i class="fa fa-map-marker" style="width:30px"></i> Ha Noi, VN<br>
+                <i class="fa fa-phone" style="width:30px"></i> Phone: +8485107196<br>
+                <i class="fa fa-envelope" style="width:30px"> </i> Email: huyphansy226@mail.com<br>
+            </div>
+            <div class="w3-col m6">
+                <div class="w3-row-padding" style="margin:0 -16px 8px -16px"></div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.097938454915!2d105.77951851437827!3d21.0287668931553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b329f68977%3A0x6ddf5ff1e829fc56!2zxJDhuqFpIGjhu41jIEdyZWVud2ljaCAoVmnhu4d0IE5hbSk!5e0!3m2!1sen!2s!4v1601451678131!5m2!1sen!2s"
+                    style="width:82%" frameborder="0" style="border:0;" aria-hidden="false" tabindex="0"></iframe>
+
+            </div>
+        </div>
+
+        <!-- End Page Content -->
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <p class="w3-medium">Powered by <a href="https://www.facebook.com/profile.php?id=100010380105167"
+                target="_blank">Huy Phan</a>
+        </p>
+    </footer>
+
+
+</body>
+
+</html>

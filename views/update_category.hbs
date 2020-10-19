@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Category</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+</head>
+<body>
+    <form action="/doUpdateCategory" method="POST">
+        <div class="container">
+            <h1 class="well">Update Category Information</h1>
+            <div class="col-lg-12 well">
+                <div class="row">
+                    <form action="/doUpdateCategory" method="post">
+                        <input type="hidden" name="id" value="{{model._id}}">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-6 form-group">
+                                    <label> Name</label>
+                                    <input type="text" name = "txtName" value="{{ model.name }}"  placeholder="Enter  Name Here.." class="form-control">
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                    <label>Description</label>
+                                    <input type="text" name = "txtDescription" value="{{ model.description}}" placeholder="Enter Description Here.." class="form-control">
+                                </div>
+                            </div>                         
+                            <button type="submit" value= "AddStaff" class="btn btn-lg btn-info">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
