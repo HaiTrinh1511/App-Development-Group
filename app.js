@@ -32,7 +32,7 @@ app.set("trust proxy", 1);
 var MongoClient = require("mongodb").MongoClient;
 var url =
   "mongodb+srv://huyphansy226:huyphansy226@cluster0.es2eh.mongodb.net/test";
-
+  
 async function getMongoClient() {
   let client = await MongoClient.connect(url);
   let dbo = client.db("Training");
